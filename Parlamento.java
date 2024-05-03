@@ -84,8 +84,9 @@ public class Parlamento {
 	public static void listarDatos() {
 		boolean hayEmpate=false;
 		String registro;
+		String ganador="";
 		int votos;
-		int votosMax=0;
+		int votosMax=Integer.MIN_VALUE;
 		K.escribir("\n".repeat(40));
 		K.escribir("--------------- listado del estado de la votación --------------\n");
 		if (partidos.isEmpty()) {
@@ -96,6 +97,7 @@ public class Parlamento {
 				votos=Integer.parseInt(registro, 1, registro.length(), 10);
 				if (votos>votosMax) {
 					votosMax = votos;
+					ganador=clave;
 					hayEmpate=false;
 				} else if (votos==votosMax)
 					hayEmpate=true;
@@ -104,7 +106,9 @@ public class Parlamento {
 			if (hayEmpate) {
 				K.escribir("-------------------------------------------------\n");
 				K.escribir("Hay empate entre varios grupos con "+votosMax+" votos.\n");
-			}
+			} else
+				K.escribir("No existe empate. El ganador es \""+ganador+"\" con "+votosMax+" votos.\n");
+
 		}
 		K.escribir("-------------------------------------------------\n");
 		K.preguntar("Pulse INTRO para volver al menú");
@@ -118,6 +122,44 @@ public class Parlamento {
 		return;
 	}
 	public static void desempatar() {
+		boolean hayEmpate=false;
+		String registro;
+		String ganador="";
+		int votos;
+		int votosMax=Integer.MIN_VALUE;
+		if (partidos.isEmpty())
+			K.escribir("No existen registros.\n");
+		else {
+			for (String clave : partidos.keySet()) {
+				registro = partidos.get(clave);
+				votos = Integer.parseInt(registro, 1, registro.length(), 10);
+				if (votos > votosMax) {
+					votosMax = votos;
+					ganador=clave;
+					hayEmpate = false;
+				} else if (votos == votosMax)
+					hayEmpate = true;
+			}
+			if (hayEmpate) {
+				K.escribir("-------------------------------------------------\n");
+				K.escribir("Hay empate entre varios grupos con " + votosMax + " votos.\n");
+				K.escribir("Debe introducir más votos a los ganadores.");
+				K.escribir("Estos son los grupos con máxima puntuación:\n");
+				for (String clave : partidos.keySet()) {
+					registro = partidos.get(clave);
+					votos = Integer.parseInt(registro, 1, registro.length(), 10);
+					if (votos == votosMax) {
+						registro="s"+votos;
+						partidos.replace(clave, registro);
+						K.escribir("- Grupo \"" + clave + "\"\n");
+					}
+				}
+				K.preguntar("Pulse INTRO para introducir más votos a los ganadores.");
+				pedirDatos(true);
+			} else
+				K.escribir("No existe empate. El ganador es \""+ganador+"\" con "+votosMax+" votos.\n");
+		}
+		K.preguntar("Pulse INTRO para continuar...");
 		return;
 	}
 }
