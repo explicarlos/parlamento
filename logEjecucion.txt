@@ -1,0 +1,176 @@
+[ejecución de programa Parlamento.java]------------------------------------------
+
+--------------- menú del sistema de votación --------------
+- Listar los datos introducidos
+- Introducir votos
+- Desempatar votación
+- Borrar todos los registros
+- Salir del programa
+-----------------------------------------------------------
+Elija una opción (l/i/d/b/s) -> l
+
+...
+
+--------------- listado del estado de la votación --------------
+No existen registros para mostrar.
+-------------------------------------------------
+Pulse INTRO para volver al menú ->
+
+...
+
+--------------- menú del sistema de votación --------------
+- Listar los datos introducidos
+- Introducir votos
+- Desempatar votación
+- Borrar todos los registros
+- Salir del programa
+-----------------------------------------------------------
+Elija una opción (l/i/d/b/s) -> i
+
+...
+
+--------------- introduciendo datos de votación --------------
+Introduzca nombre de grupo (INTRO=fin) -> pp
+Grupo "PP" no estaba registrado y ahora sí es votable.
+Antes tenía 0 votos.
+Introduzca los votos a añadir -> 100
+Grupo "PP" ahora tiene 100 votos y está marcado como inactivo.
+--------------------------------------
+Introduzca nombre de grupo (INTRO=fin) -> psoe
+Grupo "PSOE" no estaba registrado y ahora sí es votable.
+Antes tenía 0 votos.
+Introduzca los votos a añadir -> 60
+Grupo "PSOE" ahora tiene 60 votos y está marcado como inactivo.
+--------------------------------------
+Introduzca nombre de grupo (INTRO=fin) ->
+
+...
+
+--------------- menú del sistema de votación --------------
+- Listar los datos introducidos
+- Introducir votos
+- Desempatar votación
+- Borrar todos los registros
+- Salir del programa
+-----------------------------------------------------------
+Elija una opción (l/i/d/b/s) -> l
+
+...
+
+--------------- listado del estado de la votación --------------
+Grupo "PP" tiene 100 votos.
+Grupo "PSOE" tiene 60 votos.
+No existe empate. El ganador es "PP" con 100 votos.
+-------------------------------------------------
+Pulse INTRO para volver al menú ->
+
+...
+
+--------------- menú del sistema de votación --------------
+- Listar los datos introducidos
+- Introducir votos
+- Desempatar votación
+- Borrar todos los registros
+- Salir del programa
+-----------------------------------------------------------
+Elija una opción (l/i/d/b/s) -> Debe responder un solo carácter
+Debe escoger una opción válida.
+Elija una opción (l/i/d/b/s) -> i
+
+...
+
+--------------- introduciendo datos de votación --------------
+Introduzca nombre de grupo (INTRO=fin) -> pnv
+Grupo "PNV" no estaba registrado y ahora sí es votable.
+Antes tenía 0 votos.
+Introduzca los votos a añadir -> 100
+Grupo "PNV" ahora tiene 100 votos y está marcado como inactivo.
+--------------------------------------
+Introduzca nombre de grupo (INTRO=fin) ->
+
+...
+
+--------------- menú del sistema de votación --------------
+- Listar los datos introducidos
+- Introducir votos
+- Desempatar votación
+- Borrar todos los registros
+- Salir del programa
+-----------------------------------------------------------
+Elija una opción (l/i/d/b/s) -> l
+
+...
+
+--------------- listado del estado de la votación --------------
+Grupo "PP" tiene 100 votos.
+Grupo "PNV" tiene 100 votos.
+Grupo "PSOE" tiene 60 votos.
+-------------------------------------------------
+Hay empate entre varios grupos con 100 votos.
+-------------------------------------------------
+Pulse INTRO para volver al menú ->
+
+...
+
+--------------- menú del sistema de votación --------------
+- Listar los datos introducidos
+- Introducir votos
+- Desempatar votación
+- Borrar todos los registros
+- Salir del programa
+-----------------------------------------------------------
+Elija una opción (l/i/d/b/s) -> d
+
+...
+
+-------------------------------------------------
+Hay empate entre varios grupos con 100 votos.
+Debe introducir más votos a los ganadores.Estos son los grupos con máxima puntuación:
+- Grupo "PP"
+- Grupo "PNV"
+Pulse INTRO para introducir más votos a los ganadores. ->
+
+...
+
+--------------- introduciendo datos de votación --------------
+Introduzca nombre de grupo (INTRO=fin) -> pnv
+Grupo "PNV" ya estaba registrado y ahora sí es votable.
+Antes tenía 100 votos.
+Introduzca los votos a añadir -> 1
+Grupo "PNV" ahora tiene 101 votos y está marcado como activo.
+--------------------------------------
+Introduzca nombre de grupo (INTRO=fin) -> 
+Pulse INTRO para volver al menú ->
+
+...
+
+--------------- menú del sistema de votación --------------
+- Listar los datos introducidos
+- Introducir votos
+- Desempatar votación
+- Borrar todos los registros
+- Salir del programa
+-----------------------------------------------------------
+Elija una opción (l/i/d/b/s) -> l
+
+...
+
+--------------- listado del estado de la votación --------------
+Grupo "PP" tiene 100 votos.
+Grupo "PNV" tiene 101 votos.
+Grupo "PSOE" tiene 60 votos.
+No existe empate. El ganador es "PNV" con 101 votos.
+-------------------------------------------------
+Pulse INTRO para volver al menú -> 
+
+...
+
+--------------- menú del sistema de votación --------------
+- Listar los datos introducidos
+- Introducir votos
+- Desempatar votación
+- Borrar todos los registros
+- Salir del programa
+-----------------------------------------------------------
+Elija una opción (l/i/d/b/s) -> s
+Terminando programa.
